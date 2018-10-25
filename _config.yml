@@ -1,0 +1,9 @@
+title: Tim Perry - UK North West Software Engineer
+baseurl: ""
+url: "https://www.timperry.co.uk"
+
+paginate: 10
+paginate_path: "/page:num/"
+
+plugins:
+  - jekyll-paginate

@@ -1,0 +1,20 @@
+---
+layout: default
+title: Photography
+permalink: /photography/
+---
+
+<section class="galleries">
+   {% for gallery_hash in site.data.photos %}
+   {% assign gallery = gallery_hash[1] %}
+    <div class="gallery">
+        <h3 class="gallery__title">{{ gallery.title }}</h3>
+        {% for image in gallery.images %}
+        <a href="{{ image.url }}" class="gallery__image" data-lightbox="lightbox-{{ gallery.title }}" data-title="{{ image.title }}">
+            <img src="{{ image.url }}" alt="{{ gallery.title }}" />
+        </a>
+        {% endfor %}
+        <div class="gallery__total">{{ gallery.images | size }} images</div>
+    </div>
+    {% endfor %}
+</section>

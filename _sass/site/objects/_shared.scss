@@ -1,0 +1,39 @@
+html, body {
+  min-height: 880px;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: $c--very-light-grey;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@include mq($from: desktop) {
+  .content {
+    margin-left: $sidebar-width;
+  }
+}
+
+.wrap {
+  @include mq($from: desktop) {
+    padding: $spacing-unit;
+    width:80%;
+    max-width: 1050px;
+  }
+
+  @include mq($from: tablet) {
+    width:100%;
+  }
+
+}
+
+.page-title {
+  width: 100%;
+  font-size: 32px;
+  color: $c--white;
+  background: $c--bright-green;
+  padding: $spacing-unit/2 $spacing-unit/1.5;
+  text-transform: uppercase;
+}
