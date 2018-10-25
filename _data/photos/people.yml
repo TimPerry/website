@@ -1,0 +1,13 @@
+name: people
+images:
+  - url: /assets/photos/people/adam.jpg
+    title: My friend Adam - www.mintuz.com
+
+  - url: /assets/photos/people/kirsty-merlin.jpg
+    title: Kirsty and Merlin at Filey
+
+  - url: /assets/photos/people/me-in-shades.jpg
+    title: Me at Filey (Taken by Kirsty)
+
+  - url: /assets/photos/people/alec.jpg
+    title: My friend Alec at my house
