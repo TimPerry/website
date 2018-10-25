@@ -7,10 +7,8 @@ title: Home
     {% for post in paginator.posts %}
 
     <article class="articles__article article">
-        <a href="{{ post.url }}"><img width="328" height="220" src="{{ post.image }}" class="article__thumbnail wp-post-image"
-                alt=""></a>
         <h3 class="article__title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        {% if post.categories %}
+        <!-- {% if post.categories %}
         <dl class="article__terms">
             <dt>Categories:</dt>
             <dd>
@@ -20,7 +18,7 @@ title: Home
                 {% endfor %}
             </dd>
         </dl>
-        {% endif %}
+        {% endif %} -->
         <p class="article__excerpt">{{ post.excerpt }}</p>
         <time class="article__date" datetime="{{ post.date }}">{{ post.date | date: "%d/%m/%Y" }}</time>
     </article>
@@ -39,4 +37,46 @@ title: Home
         {% endif %}
     </div>
     {% endif %}
+
+    <!-- <div class="articles__navs articles-nav">
+        <nav class="articles-nav__categories">
+            <h2>Categories</h2>
+            <ul>
+                {% assign categories_list = site.categories %}
+                {% if categories_list.first[0] == null %}
+                {% for category in categories_list %}
+                <li><a href="#{{ category }}">{{ category | capitalize }} ({{ site.tags[category].size }})</a></li>
+                {% endfor %}
+                {% else %}
+                {% for category in categories_list %}
+                <li><a href="/{{ category[0] | downcase }}">{{ category[0] | capitalize }}</a></li>
+                {% endfor %}
+                {% endif %}
+                {% assign categories_list = nil %}
+            </ul>
+        </nav>
+
+        <nav class="articles-nav__archives">
+            <h2>Blog Archives</h2>
+            {% assign postsByYearMonth = site.posts | group_by_exp:"post", "post.date" %}
+            <ul>
+                {% for yearMonth in postsByYearMonth %}
+                <li><a href="/{{ | date: '%y/%b'" }}">{{ yearMonth.name | date: '%Y %b'" }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+        <nav class="articles-nav__tagcloud">
+            <h2>Tag Cloud</h2>
+            {% assign tags = site.tags | sort %}
+            {% for tag in tags %}
+            <span class="site-tag">
+                <a href="/tag/{{ tag | first | slugify }}/" style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
+                    {{ tag[0] | replace:'-', ' ' }}
+                </a>
+            </span>
+            {% endfor %}
+        </nav>
+
+    </div> -->
 </div>

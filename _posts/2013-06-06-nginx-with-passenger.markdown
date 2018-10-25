@@ -1,9 +1,7 @@
 ---
-layout: default
+layout: article
 title: "Nginx with passenger"
 date: 2013-06-06 22:01:28 +0000
-categories: devops
-tags: nginx ruby rails
 image: /assets/img/NGINX-328x220.jpg
 ---
 
