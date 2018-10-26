@@ -1,0 +1,12 @@
+{% include header.html %}
+<h2 class="page-title">{{ page.title }}</h2>
+<article class="article article--full">
+    <aside class="article--full__side">
+        <img width="280" height="164" src="{{ page.image }}" class="article--full__thumbnail wp-post-image" alt="">
+        <time class="article--full__date" datetime="{{ page.date }}">Published: {{ page.date | date_to_long_string }}</time>
+    </aside>
+    <div class="article--full__content">
+        {{ content }}
+    </div>
+</article>
+{% include footer.html %}
